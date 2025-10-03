@@ -48,10 +48,10 @@ git commit
 
 ### 3. 작업 끝내고 main 에 합치고 기존 브랜치 삭제
 ```
-git checkout develop
-git pull origin develop
+git checkout main
+git pull origin main
 git merge feat/기능이름
-git push origin develop
+git push origin main
 git branch -d feat/기능이름   # 사용 끝난 브랜치 삭제
 ```
 ---
