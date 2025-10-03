@@ -1,3 +1,40 @@
+## 실행 커맨드
+```uv run uvicorn app.backend.api.main:app```
+
+## (로컬) database 세팅 
+
+### 01. postgres DB 설치
+- 맥북의 경우 
+```
+brew install postgresql
+brew services start postgresql
+```
+
+- 윈도우의 경우 wsl 을 실행합시다.
+```
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+sudo service postgresql start
+```
+
+
+### 02. Dokcer로 PostgreSQL 실행
+```
+docker run --name postgres-local \
+  -e POSTGRES_USER=seobi \
+  -e POSTGRES_PASSWORD=1234 \
+  -e POSTGRES_DB=emotion_letter \
+  -p 5432:5432 \
+  -d postgres:15
+```
+
+### 03. DB 접속 테스트 
+```
+docker exec -it postgres-local psql -U seobi -d emotion_letter
+```
+```위에 접속 성공하면 q 눌러서 탈출 ```
+
+---
 ## ⚙️ .env 세팅 필수 입니다.
 
 LANGCHAIN_TRACING_V2=true  
