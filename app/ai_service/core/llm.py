@@ -19,6 +19,7 @@ vLLM와 OpenAI API를 이용한 AI 서비스 구현 코드 예시 입니다.
 #         return outputs[0].outputs[0].text
 
 
+
 # class OpenAIClient:
 #     def __init__(self, model_name: str = "gpt-4o-mini"):
 #         self.client = OpenAI()
