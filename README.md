@@ -41,7 +41,7 @@ LANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY= "..."   
 LANGCHAIN_PROJECT="..."   
 OPENAI_API_KEY = "..."
-
+BASE_URL="..."
 
 ## 📂 패키지 구조
 ```
